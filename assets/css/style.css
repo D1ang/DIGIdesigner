@@ -1,29 +1,28 @@
-  
 @import url("https://fonts.googleapis.com/css?family=Oswald:100,200,300,400,500,600,700");
 
 body,
 html {
-  margin: 0;
-  padding: 0;
-  font-family: 'Oswald', sans-serif;
-  font-style: normal;
-  font-weight: 200;
-  font-size: 24px;
-  line-height: 36px;
-  letter-spacing: -0.015em;
-  color: #fff;
-  background-color: #232323;
-  scroll-behavior: smooth;
+	margin: 0;
+	padding: 0;
+	font-family: 'Oswald', sans-serif;
+	font-style: normal;
+	font-weight: 200;
+	font-size: 24px;
+	line-height: 36px;
+	letter-spacing: -0.015em;
+	color: #fff;
+	background-color: #232323;
+	scroll-behavior: smooth;
 }
 
 canvas {
-  background: #f8f8f8;
-  padding: 0;
-  margin: 0 auto;
-  margin-bottom: 1rem;
-  display: block;
+	background: #f8f8f8;
+	padding: 0;
+	margin: 0 auto;
+	margin-bottom: 1rem;
+	display: block;
 }
 
 #shirt--inject-1 {
-  fill: #232323;
+	fill: #ffffff;
 }
