@@ -23,3 +23,7 @@ canvas {
   margin-bottom: 1rem;
   display: block;
 }
+
+#shirt--inject-1 {
+  fill: #232323;
+}

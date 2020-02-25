@@ -1,7 +1,7 @@
 (function() {
 	const canvas = document.getElementById('myCanvas');
 	const ctx = canvas.getContext('2d');
-	ctx.fillStyle = 'green';
+  ctx.fillStyle = 'green';
 	ctx.save();
 	ctx.beginPath();
 	ctx.moveTo(227.1, 33.6);
@@ -31,3 +31,4 @@
 	ctx.restore();
 	draw.ctx();
 })();
+

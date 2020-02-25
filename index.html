@@ -8,6 +8,7 @@
   <link rel="icon" href="assets/images/favicon.png" type="image/png" sizes="32x32">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="assets/js/svg-inject.js"></script>
   <link rel="stylesheet" href="assets/css/style.css">
   <script src="https://kit.fontawesome.com/dd6f581e56.js" crossorigin="anonymous"></script>
 </head>
@@ -20,7 +21,9 @@
       </div>
       <div class="col-sm">
         <p>contact right</p>
-        <canvas class="canvas-style" id="myCanvas" width="500" height="500"></canvas>
+        
+        <!-- <canvas class="canvas-style" id="myCanvas" width="500" height="500"></canvas> -->
+        <img src="assets/svg/nike-shirt.svg" onload="SVGInject(this)" />
 
       </div>
     </div>
