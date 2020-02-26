@@ -21,30 +21,31 @@
         <form>
           <select id="colourSelect" onchange="colour()">
             <option value="#ffffff">White</option>
-            <option value="#008000">Basic Green</option>
+            <option value="#008000">Green</option>
             <option value="#ff0000">Red</option>
             <option value="#0000ff">Blue</option>
             <option value="#ffa500">Orange</option>
           </select>
+          <input type="file" id="imageLoader" name="imageLoader" />
         </form>
+        
       </div>
 
-      <div class="col-sm">
-        <p>contact right</p>
-        
-        <!-- <canvas class="canvas-style" id="myCanvas" width="500" height="500"></canvas> -->
-        <img src="assets/svg/nike-shirt.svg" onload="SVGInject(this)" />
+      <div class="col-sm">  
+        <div>
+          <canvas id="canvas" width="500" height="500"></canvas>
+        </div>
+
+        <div id="container">
+          <img src="assets/svg/nike-shirt.svg" onload="SVGInject(this)" />
+        </div>
 
       </div>
     </div>
   </div>
 
-  <!-- Jquery -->
-  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-    crossorigin="anonymous"></script>
-  <!-- Jquery-->
-
-  <!-- Canvas -->
+  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/3.6.2/fabric.min.js" integrity="sha256-fr9sBX7aP9vOvYZIOqYbUN697bzDaTEcxTP6hQWw/hE=" crossorigin="anonymous"></script>
   <script type="text/javascript" src="assets/js/main.js"></script>
 
 </body>
