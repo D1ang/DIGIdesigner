@@ -1,13 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 256.9 293.9" style="enable-background:new 0 0 256.9 293.9;" xml:space="preserve">
-
-<style type="text/css">
-	.shirt-colour{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}
-	.shirt-outlines{fill:#C7C6C6;}
-  .shirt-shadow{fill:#C7C6C6;fill-opacity:0.502;}
-</style>
-
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256.9 293.9">
 <path id="shirt" class="shirt-colour" d="M227.1,33.6c-5-8.8-24.8-17.1-24.8-17.1l-34.7-16c0,0-9.3,6.9-42,7.2C93,7.4,89.2,0.6,89.2,0.6
 	l-34.7,16c0,0-19.8,8.3-24.8,17.1c-5,8.8-29.2,54.5-29.2,54.5l35.2,23.1l8.8-9.9c0,0,13.5,53.9,13.5,65.5s-6.9,109.6-6.9,109.6
 	s7.7,17.1,77.1,17.1h0.3c69.4,0,77.1-17.1,77.1-17.1s-6.9-98-6.9-109.6s13.5-65.5,13.5-65.5l8.8,9.9l35.2-23.1

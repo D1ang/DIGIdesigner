@@ -20,6 +20,14 @@ html {
 	z-index: 1;
 }
 
-#shirt--inject-1 {
+.shirt-colour {
 	fill: #ffffff;
+}
+
+.shirt-outlines {
+	fill: #c7c6c6;
+}
+.shirt-shadow {
+	fill: #c7c6c6;
+	fill-opacity: 0.502;
 }
