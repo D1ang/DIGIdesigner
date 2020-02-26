@@ -12,6 +12,8 @@ html {
 }
 
 #container {
+	top: 40px;
+	left: 25px;
 	width: 400px;
 	height: 400px;
 	position: absolute;
