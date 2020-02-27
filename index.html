@@ -13,6 +13,9 @@
 </head>
 
 <body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">International Badge Service</a>
+</nav>
 
   <div class="container main">
     <div class="row rowstyle">
@@ -20,6 +23,21 @@
       <!-- Fabric colour selection to change the clothing colour -->
         <form>
           <div class="form-group">
+            <h2>ENTER YOUR DETAILS</h2>
+
+          <button>Male</button>
+          <button>Female</button>
+
+          <select class="form-control form-control-lg my-2" id="typeSelect" onchange="type()">
+            <option value="shirt">Shirt</option>
+            <option value="hoody">Hoody</option>
+          </select>
+
+          <select class="form-control form-control-lg my-2" id="brandSelect" onchange="brand()">
+            <option value="nike">Nike</option>
+            <option value="assics">Assics</option>
+          </select>
+
           <select class="form-control form-control-lg my-2" id="colourSelect" onchange="colour()">
             <option value="#ffffff">White</option>
             <option value="#008000">Green</option>
@@ -28,6 +46,17 @@
             <option value="#ffa500">Orange</option>
           </select>
           
+          <button>XS</button>
+          <button>S</button>
+          <button>M</button>
+          <button>L</button>
+          <button>XL</button>
+
+          <input type="number">
+
+          <button>Send</button>
+
+
           <input type="file" class="form-control-file" id="imageLoader" name="imageLoader" />
         </div>
         </form>

@@ -3,7 +3,9 @@ function colour() {
 	var colourOption = document.getElementById('colourSelect');
 	var i = colourOption.selectedIndex;
 
-	document.getElementById('shirt--inject-1').style.fill = document.getElementsByTagName('option')[i].value;
+	document.getElementById('shirt--inject-1').style.fill = document
+		.getElementById('colourSelect')
+		.getElementsByTagName('option')[i].value;
 }
 
 var canvas = new fabric.Canvas('canvas');
