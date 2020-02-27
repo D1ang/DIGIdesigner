@@ -5,10 +5,24 @@ html {
 	background-color: #232323;
 }
 
+.main {
+	background-color: aqua;
+	height: 100vh;
+}
+
+.rowstyle {
+	background-color: blue;
+}
+
+.colstyle {
+	background-color: brown;
+}
+
 #canvas {
-	border: 1px solid black;
-	position: absolute;
+	border: 1px solid red;
 	z-index: 2;
+	align-items: center;
+	width: 100%;
 }
 
 #container {
