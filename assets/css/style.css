@@ -26,10 +26,9 @@ html {
 }
 
 #container {
-	top: 40px;
-	left: 25px;
-	width: 400px;
-	height: 400px;
+	background-color: chartreuse;
+	top: 0px;
+	width: 95%;
 	position: absolute;
 	z-index: 1;
 }

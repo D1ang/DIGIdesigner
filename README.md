@@ -11,4 +11,5 @@ SOLUTTIONS:
 - By using an object tag the svg can be styled and changed, but the page needs to be refreshed with every change.
 
 ### Making a fabric canvas responsive
+By using fabric.js with canvas
 
