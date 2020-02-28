@@ -4,29 +4,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Brands</title>
-  <link rel="icon" href="assets/images/favicon.png" type="image/png" sizes="32x32">
+  <title>Digidesigner</title>
+  <link rel="icon" href="assets/img/favicon.png" type="image/png" sizes="32x32">
+  <script src="https://kit.fontawesome.com/dd6f581e56.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link rel="stylesheet" href="assets/css/style.css">
-  <script src="https://kit.fontawesome.com/dd6f581e56.js" crossorigin="anonymous"></script>
-  <script src="assets/js/svg-inject.js"></script>
 </head>
 
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">International Badge Service</a>
-</nav>
+  <!-- Navigation bar -->
+  <nav class="navbar navbar-light navbar-custom">
+    <a class="navbar-brand" href="#">
+      <img src="assets/svg/logo.svg" height="30" alt="International Brands Service">
+    </a>
+  </nav>
+  <!-- Navigation bar end-->
 
-  <div class="container main">
-    <div class="row rowstyle">
-      <div class="col-sm colstyle">
-      <!-- Fabric colour selection to change the clothing colour -->
-        <form>
-          <div class="form-group">
-            <h2>ENTER YOUR DETAILS</h2>
 
-          <button>Male</button>
-          <button>Female</button>
+  <div class="container mt-4">
+    <div class="row">
+      <div class="col-sm">
+        <h1 class="titles text-uppercase text-center">Enter your details</h1>
+
+        <div class="form-group mt-4">
+          <input type="button" id="btn01" value="OK">
+          <button><i class="fas fa-male"></i> Male</button>
+          <button><i class="fas fa-female"></i> Female</button>
 
           <select class="form-control form-control-lg my-2" id="typeSelect" onchange="type()">
             <option value="shirt">Shirt</option>
@@ -38,6 +41,7 @@
             <option value="assics">Assics</option>
           </select>
 
+                <!-- Fabric colour selection to change the clothing colour -->
           <select class="form-control form-control-lg my-2" id="colourSelect" onchange="colour()">
             <option value="#ffffff">White</option>
             <option value="#008000">Green</option>
@@ -45,40 +49,56 @@
             <option value="#0000ff">Blue</option>
             <option value="#ffa500">Orange</option>
           </select>
-          
+
+          <select id="car" onchange="ChangeCarList()">
+            <option value="">-- Car --</option>
+            <option value="VO">Volvo</option>
+            <option value="VW">Volkswagen</option>
+            <option value="BMW">BMW</option>
+          </select>
+
+          <select id="carmodel"></select>
+
           <button>XS</button>
           <button>S</button>
           <button>M</button>
           <button>L</button>
           <button>XL</button>
 
+
+          <button onclick="disableElement()">Disable</button>
           <input type="number">
 
           <button>Send</button>
-
+          <button onclick="brandSelector()">Asics</button>
 
           <input type="file" class="form-control-file" id="imageLoader" name="imageLoader" />
         </div>
-        </form>
+
       </div>
 
-      <div class="col-sm">  
+      <div class="col-sm">
         <div>
           <canvas id="canvas"></canvas>
         </div>
-        
+
         <div id="container">
-          <img src="assets/svg/nike-shirt.svg" onload="SVGInject(this)" />
+          <img id="brand" src="assets/svg/nike-shirt.svg" class="injectable" />
         </div>
+
+
+
 
       </div>
     </div>
   </div>
 
-  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/3.6.2/fabric.min.js" integrity="sha256-fr9sBX7aP9vOvYZIOqYbUN697bzDaTEcxTP6hQWw/hE=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/3.6.2/fabric.min.js"
+    integrity="sha256-fr9sBX7aP9vOvYZIOqYbUN697bzDaTEcxTP6hQWw/hE=" crossorigin="anonymous"></script>
   <script type="text/javascript" src="assets/js/main.js"></script>
-
+  <script src="assets/js/svg-inject.js"></script>
 </body>
 
 </html>
