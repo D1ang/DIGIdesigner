@@ -18,9 +18,9 @@ html {
 
 #canvas {
   margin-top: 10px;
-	z-index: 2;
 	align-items: center;
-	width: 100%;
+  width: 100%;
+  z-index: 2;
 }
 
 #container {
@@ -29,16 +29,4 @@ html {
 	width: 95%;
 	position: absolute;
 	z-index: 1;
-}
-
-.shirt-colour {
-	fill: #ffffff;
-}
-
-.shirt-outlines {
-	fill: #c7c6c6;
-}
-.shirt-shadow {
-	fill: #c7c6c6;
-	fill-opacity: 0.502;
 }
