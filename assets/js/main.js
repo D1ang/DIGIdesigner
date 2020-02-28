@@ -1,18 +1,3 @@
-//Grabs the Hex colour code from the option form and transforms the fill of the .svg file to the proper colour
-function colour() {
-	var colourOption = document.getElementById('colourSelect');
-	var i = colourOption.selectedIndex;
-
-	document.getElementById('fill--inject-1').style.fill = document
-		.getElementById('colourSelect')
-		.getElementsByTagName('option')[i].value;
-}
-
-function brandSelector() {
-	document.getElementById('brand').src = 'assets/svg/asics-shirt.svg';
-	SVGInject(document.querySelector('img.injectable'));
-}
-
 var canvas = new fabric.Canvas('canvas');
 
 //Image Loader to load a .png file on the canvas.
@@ -46,27 +31,48 @@ function resizeCanvas() {
 }
 resizeCanvas();
 
-var carsAndModels = {};
-carsAndModels['VO'] = [ 'V70', 'XC60', 'XC90' ];
-carsAndModels['VW'] = [ 'Golf', 'Polo', 'Scirocco', 'Touareg' ];
-carsAndModels['BMW'] = [ 'M6', 'X5', 'Z3' ];
+var garmentsAndBrands = {};
+garmentsAndBrands[''] = [ 'Select a brand' ];
+garmentsAndBrands['shirt'] = [ 'Select a brand', 'Nike', 'Asics' ];
+garmentsAndBrands['polo'] = [ 'Select a brand', 'Nike', 'Asics', 'Humel' ];
+garmentsAndBrands['hoody'] = [ 'Select a brand', 'Nike' ];
 
-function ChangeCarList() {
-	var carList = document.getElementById('car');
-	var modelList = document.getElementById('carmodel');
-	var selCar = carList.options[carList.selectedIndex].value;
-	while (modelList.options.length) {
-		modelList.remove(0);
+/* The following function is based on the Car selector from W3schools.com
+It wil listen on a change in the first valuelist and created an array that wil be used for a second valuelist based on the selection from the first */
+
+function garmentSelect() {
+	var garmentList = document.getElementById('garment');
+	var brandList = document.getElementById('brands');
+	var selectGarment = garmentList.options[garmentList.selectedIndex].value;
+	while (brandList.options.length) {
+		brandList.remove(0);
 	}
-	var cars = carsAndModels[selCar];
-	if (cars) {
+	var garments = garmentsAndBrands[selectGarment];
+	if (garments) {
 		var i;
-		for (i = 0; i < cars.length; i++) {
-			var car = new Option(cars[i], i);
-			modelList.options.add(car);
+		for (i = 0; i < garments.length; i++) {
+			var garment = new Option(garments[i], i);
+			brandList.options.add(garment);
 		}
 	}
 }
+
+function brandSelector() {
+	document.getElementById('brands').src = 'assets/svg/asics-shirt.svg';
+  SVGInject(document.querySelector('img.injectable'));
+  return "Succes"
+}
+
+//Grabs the Hex colour code from the option form and transforms the fill of the .svg file to the proper colour
+function colour() {
+	var colourOption = document.getElementById('colourSelect');
+	var i = colourOption.selectedIndex;
+
+	document.getElementById('fill--inject-1').style.fill = document
+		.getElementById('colourSelect')
+		.getElementsByTagName('option')[i].value;
+}
+
 
 function disableElement() {
 	document.getElementById('btn01').disabled = true;
