@@ -3,9 +3,14 @@ function colour() {
 	var colourOption = document.getElementById('colourSelect');
 	var i = colourOption.selectedIndex;
 
-	document.getElementById('shirt--inject-1').style.fill = document
+	document.getElementById('fill--inject-1').style.fill = document
 		.getElementById('colourSelect')
 		.getElementsByTagName('option')[i].value;
+}
+
+function brandSelector() {
+	document.getElementById('brand').src = 'assets/svg/asics-shirt.svg';
+	SVGInject(document.querySelector('img.injectable'));
 }
 
 var canvas = new fabric.Canvas('canvas');
@@ -40,3 +45,29 @@ function resizeCanvas() {
 	canvas.renderAll();
 }
 resizeCanvas();
+
+var carsAndModels = {};
+carsAndModels['VO'] = [ 'V70', 'XC60', 'XC90' ];
+carsAndModels['VW'] = [ 'Golf', 'Polo', 'Scirocco', 'Touareg' ];
+carsAndModels['BMW'] = [ 'M6', 'X5', 'Z3' ];
+
+function ChangeCarList() {
+	var carList = document.getElementById('car');
+	var modelList = document.getElementById('carmodel');
+	var selCar = carList.options[carList.selectedIndex].value;
+	while (modelList.options.length) {
+		modelList.remove(0);
+	}
+	var cars = carsAndModels[selCar];
+	if (cars) {
+		var i;
+		for (i = 0; i < cars.length; i++) {
+			var car = new Option(cars[i], i);
+			modelList.options.add(car);
+		}
+	}
+}
+
+function disableElement() {
+	document.getElementById('btn01').disabled = true;
+}
