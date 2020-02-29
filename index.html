@@ -37,28 +37,21 @@
             <option value="hoody">Hoody</option>
           </select>
 
-          <select id="brands" class="form-control form-control-lg my-2" onchange="brandSelector()">
-            <option value="">Select a brand</option>
+          <!-- Brands selection to change the clothing brand -->
+          <select id="brands" class="form-control form-control-lg my-2" onchange="colourSelect()">
+            <option value=""></option>
           </select>
 
-
-                <!-- Fabric colour selection to change the clothing colour -->
-          <select class="form-control form-control-lg my-2" id="colourSelect" onchange="colour()">
-            <option value="#ffffff">White</option>
-            <option value="#008000">Green</option>
-            <option value="#ff0000">Red</option>
-            <option value="#0000ff">Blue</option>
-            <option value="#ffa500">Orange</option>
+          <!-- Fabric colour selection to change the clothing colour -->
+          <select id="colour" class="form-control form-control-lg my-2">
+            <option value=""></option>
           </select>
 
-          
-
-          <button>XS</button>
-          <button>S</button>
-          <button>M</button>
-          <button>L</button>
-          <button>XL</button>
-
+          <button onclick="activateColour()">XS</button>
+          <button onclick="activateColour()">S</button>
+          <button onclick="activateColour()">M</button>
+          <button onclick="activateColour()">L</button>
+          <button onclick="activateColour()">XL</button>
 
           <button onclick="disableElement()">Disable</button>
           <input type="number">
@@ -77,7 +70,7 @@
         </div>
 
         <div id="container">
-          <img id="brand" src="assets/svg/nike-shirt.svg" class="injectable" />
+          <img id="shirt" src="assets/svg/nike-shirt.svg" class="injectable" />
         </div>
 
 
