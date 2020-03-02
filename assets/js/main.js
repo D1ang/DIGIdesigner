@@ -22,6 +22,12 @@ function handleImage(e) {
 	reader.readAsDataURL(e.target.files[0]);
 }
 
+// Bootstrap Custom Forms - the name of the file appear on fileselect after upload.
+$('.custom-file-input').on('change', function() {
+	var fileName = $(this).val().split('\\').pop();
+	$(this).siblings('.custom-file-label').addClass('selected').html(fileName);
+});
+
 // Resize the canvas depending on the size of an element with jQuery: Carlos Sampaio Peredo
 window.addEventListener('resize', resizeCanvas, false);
 function resizeCanvas() {

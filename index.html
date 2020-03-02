@@ -26,10 +26,19 @@
         <h1 class="titles text-uppercase text-center">Enter your details</h1>
 
         <div class="form-group mt-4">
-          <button><i class="fas fa-male"></i> Male</button>
-          <button><i class="fas fa-female"></i> Female</button>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="male">
+            <label class="form-check-label" for="inlineRadio1">Male</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="female">
+            <label class="form-check-label" for="inlineRadio2">Female</label>
+          </div>
 
-          <select id="garment" class="form-control form-control-lg my-2" onchange="garmentSelect()">
+
+
+
+          <select id="garment" class="form-control form-control-lg my-2 custom-select" onchange="garmentSelect()">
             <option value="">Select a garment</option>
             <option value="shirt">T-Shirt</option>
             <option value="polo">Polo</option>
@@ -37,26 +46,32 @@
           </select>
 
           <!-- Brands selection to change the clothing brand -->
-          <select id="brands" class="form-control form-control-lg my-2" onchange="colourSelect()">
+          <select id="brands" class="form-control form-control-lg my-2 custom-select" onchange="colourSelect()">
             <option value=""></option>
           </select>
 
           <!-- Fabric colour selection to change the clothing colour -->
-          <select id="colour" class="form-control form-control-lg my-2" onchange="activateColour()">
+          <select id="colour" class="form-control form-control-lg my-2 custom-select" onchange="activateColour()">
             <option value=""></option>
           </select>
 
-          <button>XS</button>
-          <button>S</button>
-          <button>M</button>
-          <button>L</button>
-          <button>XL</button>
+          <button type="button" class="btn btn-outline-secondary mr-2">XS</button>
+          <button type="button" class="btn btn-outline-secondary mr-2">S</button>
+          <button type="button" class="btn btn-outline-secondary mr-2">M</button>
+          <button type="button" class="btn btn-outline-secondary mr-2">L</button>
+          <button type="button" class="btn btn-outline-secondary">XL</button>
 
-          <input type="number">
-          <input type="button" id="btn01" value="OK">
-
-          <input type="file" class="form-control-file" id="imageLoader" name="imageLoader" />
-          <button onclick="disableElement()">Disable</button>
+          <div class="form-row my-2">
+          <div class="form-group col-md-4">
+            <input type="number" class="form-control" id="quantity" placeholder="QTY">
+          </div>
+          <div class="form-group col-md-8">
+            <div class="custom-file">
+              <input type="file" class="custom-file-input" id="imageLoader" name="imageLoader">
+              <label class="custom-file-label" for="customFile">Choose file</label>
+            </div>
+          </div>
+        </div>
         </div>
       </div>
 
