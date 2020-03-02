@@ -9,6 +9,7 @@
   <script src="https://kit.fontawesome.com/dd6f581e56.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/svg-inject.js"></script>
 </head>
 
 <body>
@@ -25,6 +26,8 @@
       <div class="col-sm">
         <h1 class="titles text-uppercase text-center">Enter your details</h1>
 
+        <!-- Input form -->
+    <form>
         <div class="form-group mt-4">
           <div class="form-check form-check-inline">
             <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="male">
@@ -35,9 +38,7 @@
             <label class="form-check-label" for="inlineRadio2">Female</label>
           </div>
 
-
-
-
+          <!-- Garment selection -->
           <select id="garment" class="form-control form-control-lg my-2 custom-select" onchange="garmentSelect()">
             <option value="">Select a garment</option>
             <option value="shirt">T-Shirt</option>
@@ -55,11 +56,15 @@
             <option value=""></option>
           </select>
 
+        <!-- Size selection -->
+        <div class="btn-group-justified">
           <button type="button" class="btn btn-outline-secondary mr-2">XS</button>
           <button type="button" class="btn btn-outline-secondary mr-2">S</button>
           <button type="button" class="btn btn-outline-secondary mr-2">M</button>
           <button type="button" class="btn btn-outline-secondary mr-2">L</button>
           <button type="button" class="btn btn-outline-secondary">XL</button>
+          <button type="button" class="btn btn-outline-secondary" onclick="clean()">Clear</button>
+        </div>
 
           <div class="form-row my-2">
           <div class="form-group col-md-4">
@@ -74,13 +79,16 @@
         </div>
         </div>
       </div>
+    </form>
+<!-- Imput form end-->
+
 
       <div class="col-sm">
         <div>
           <canvas id="canvas"></canvas>
         </div>
         <div id="container">
-            <img id="shirt" src="" class="injectable" />
+            <img id="shirt" src="assets/svg/nike-shirt.svg" class="injectable" />
         </div>
       </div>
     </div>
@@ -89,7 +97,6 @@
   <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/3.6.2/fabric.min.js" integrity="sha256-fr9sBX7aP9vOvYZIOqYbUN697bzDaTEcxTP6hQWw/hE=" crossorigin="anonymous"></script>
   <script type="text/javascript" src="assets/js/main.js"></script>
-  <script src="assets/js/svg-inject.js"></script>
 </body>
 
 </html>
