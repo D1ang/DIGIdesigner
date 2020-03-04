@@ -21,6 +21,20 @@ body, html {
   border: 1px solid #ced4da ;
 }
 
+a.custom-icons:link, a.custom-icons:visited {
+  color: #000;
+  text-decoration: none
+}
+
+a.custom-icons:hover {
+  color: blue;
+  text-decoration: none
+}
+
+a.custom-icons:active {
+  color: green;
+}
+
 /*----------------------Garment example canvas box---------------- */
 
 .drawing-area {
