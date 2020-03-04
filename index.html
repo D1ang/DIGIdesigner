@@ -54,17 +54,6 @@
               <option value=""></option>
             </select>
 
-            <label for="garment-color">T-Shirt Color:</label>
-            <select id="garment-color">
-              <!-- You can add any color with a new option and definings its hex code -->
-              <option value="#fff">White</option>
-              <option value="#000">Black</option>
-              <option value="#f00">Red</option>
-              <option value="#008000">Green</option>
-              <option value="#ff0">Yellow</option>
-            </select>
-
-
             <!-- Size selection -->
             <div class="btn-group-justified">
               <button type="button" class="btn btn-outline-secondary mr-2">XS</button>
@@ -94,10 +83,10 @@
       <!-- Garment preview -->
       <div class="col-sm">
         <div id="garment-div">
-          <img id="tshirt-backgroundpicture" src="assets/img/garment/empty-shirt.png" />
+          <img id="garmentImage" src="assets/img/garment/empty-shirt.png" />
           <div id="drawingArea" class="drawing-area">
             <div class="canvas-container">
-              <canvas id="tshirt-canvas" width="200" height="400"></canvas>
+              <canvas id="canvas" width="200" height="400"></canvas>
             </div>
           </div>
         </div>
