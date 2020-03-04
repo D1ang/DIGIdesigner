@@ -17,6 +17,10 @@ body, html {
 	border-bottom: solid 1px rgb(228, 228, 228);
 }
 
+.custom-button-outline {
+  border: 1px solid #ced4da ;
+}
+
 /*----------------------Garment example canvas box---------------- */
 
 .drawing-area {
@@ -52,8 +56,4 @@ body, html {
 	height: 548px;
 	position: relative;
 	background-color: #fff;
-}
-
-.custom-button-outline {
-  border: 1px solid #ced4da ;
 }
