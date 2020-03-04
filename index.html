@@ -6,10 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Digidesigner</title>
   <link rel="icon" href="assets/img/favicon.png" type="image/png" sizes="32x32">
-  <script src="https://kit.fontawesome.com/dd6f581e56.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link rel="stylesheet" href="assets/css/style.css">
-  <script src="assets/js/svg-inject.js"></script>
 </head>
 
 <body>
@@ -24,78 +22,93 @@
   <div class="container mt-4">
     <div class="row">
       <div class="col-sm">
-        <h1 class="titles text-uppercase text-center">Enter your details</h1>
+        <h1 class="title text-uppercase text-center">Enter your details</h1>
 
         <!-- Input form -->
-    <form>
-        <div class="form-group mt-4">
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="male">
-            <label class="form-check-label" for="inlineRadio1">Male</label>
+        <form>
+          <div class="form-group mt-4">
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="male">
+              <label class="form-check-label" for="inlineRadio1">Male</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="female">
+              <label class="form-check-label" for="inlineRadio2">Female</label>
+            </div>
+
+            <!-- Garment selection -->
+            <select id="garment" class="form-control form-control-lg my-2 custom-select" onchange="garmentSelect()">
+              <option value="">Select a garment</option>
+              <option value="shirt">T-Shirt</option>
+              <option value="polo">Polo</option>
+              <option value="hoody">Hoody</option>
+            </select>
+
+            <!-- Brands selection to change the clothing brand -->
+            <select id="brands" class="form-control form-control-lg my-2 custom-select" onchange="colourSelect()">
+              <option value=""></option>
+            </select>
+
+            <!-- Fabric colour selection to change the clothing colour -->
+            <select id="colour" class="form-control form-control-lg my-2 custom-select" onchange="activateColour()">
+              <option value=""></option>
+            </select>
+
+            <label for="garment-color">T-Shirt Color:</label>
+            <select id="garment-color">
+              <!-- You can add any color with a new option and definings its hex code -->
+              <option value="#fff">White</option>
+              <option value="#000">Black</option>
+              <option value="#f00">Red</option>
+              <option value="#008000">Green</option>
+              <option value="#ff0">Yellow</option>
+            </select>
+
+
+            <!-- Size selection -->
+            <div class="btn-group-justified">
+              <button type="button" class="btn btn-outline-secondary mr-2">XS</button>
+              <button type="button" class="btn btn-outline-secondary mr-2">S</button>
+              <button type="button" class="btn btn-outline-secondary mr-2">M</button>
+              <button type="button" class="btn btn-outline-secondary mr-2">L</button>
+              <button type="button" class="btn btn-outline-secondary">XL</button>
+              <button type="button" class="btn btn-outline-secondary" onclick="clean()">Clear</button>
+            </div>
+
+            <div class="form-row my-2">
+              <div class="form-group col-md-4">
+                <input type="number" class="form-control" id="quantity" placeholder="QTY">
+              </div>
+              <div class="form-group col-md-8">
+                <div class="custom-file">
+                  <input type="file" class="custom-file-input" id="imageLoader" name="imageLoader">
+                  <label class="custom-file-label" for="customFile">Choose file</label>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="female">
-            <label class="form-check-label" for="inlineRadio2">Female</label>
-          </div>
+      </div>
+      </form>
+      <!-- Imput form end-->
 
-          <!-- Garment selection -->
-          <select id="garment" class="form-control form-control-lg my-2 custom-select" onchange="garmentSelect()">
-            <option value="">Select a garment</option>
-            <option value="shirt">T-Shirt</option>
-            <option value="polo">Polo</option>
-            <option value="hoody">Hoody</option>
-          </select>
-
-          <!-- Brands selection to change the clothing brand -->
-          <select id="brands" class="form-control form-control-lg my-2 custom-select" onchange="colourSelect()">
-            <option value=""></option>
-          </select>
-
-          <!-- Fabric colour selection to change the clothing colour -->
-          <select id="colour" class="form-control form-control-lg my-2 custom-select" onchange="activateColour()">
-            <option value=""></option>
-          </select>
-
-        <!-- Size selection -->
-        <div class="btn-group-justified">
-          <button type="button" class="btn btn-outline-secondary mr-2">XS</button>
-          <button type="button" class="btn btn-outline-secondary mr-2">S</button>
-          <button type="button" class="btn btn-outline-secondary mr-2">M</button>
-          <button type="button" class="btn btn-outline-secondary mr-2">L</button>
-          <button type="button" class="btn btn-outline-secondary">XL</button>
-          <button type="button" class="btn btn-outline-secondary" onclick="clean()">Clear</button>
-        </div>
-
-          <div class="form-row my-2">
-          <div class="form-group col-md-4">
-            <input type="number" class="form-control" id="quantity" placeholder="QTY">
-          </div>
-          <div class="form-group col-md-8">
-            <div class="custom-file">
-              <input type="file" class="custom-file-input" id="imageLoader" name="imageLoader">
-              <label class="custom-file-label" for="customFile">Choose file</label>
+      <!-- Garment preview -->
+      <div class="col-sm">
+        <div id="garment-div">
+          <img id="tshirt-backgroundpicture" src="assets/img/garment/empty-shirt.png" />
+          <div id="drawingArea" class="drawing-area">
+            <div class="canvas-container">
+              <canvas id="tshirt-canvas" width="200" height="400"></canvas>
             </div>
           </div>
         </div>
-        </div>
       </div>
-    </form>
-<!-- Imput form end-->
+      <!-- Garment preview end -->
 
-
-      <div class="col-sm">
-        <div>
-          <canvas id="canvas"></canvas>
-        </div>
-        <div id="container">
-            <img id="shirt" src="assets/svg/empty-shirt.svg" class="injectable" />
-        </div>
-      </div>
     </div>
   </div>
 
-  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/3.6.2/fabric.min.js" integrity="sha256-fr9sBX7aP9vOvYZIOqYbUN697bzDaTEcxTP6hQWw/hE=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="assets/js/fabric.min.js"></script>
   <script type="text/javascript" src="assets/js/main.js"></script>
 </body>
 
