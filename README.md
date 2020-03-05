@@ -49,7 +49,7 @@ By using figma the following wireframes were created:
 
 [Digidesigner wireframe](https://github.com/D1ang/DIGIdesigner/blob/master/mockups/wireframe.pdf)
 
-[Responsive phone wireframe](https://github.com/D1ang/EL1TE/blob/master/mockups/wireframe-sm.pdf)
+[Responsive phone wireframe](https://github.com/D1ang/Digidesigner/blob/master/mockups/wireframe-sm.pdf)
 
 ### Surface
 The colours are almost non-excistent a very clean minimalist desgin has been chosen to force the attention to the provide sample shirt
