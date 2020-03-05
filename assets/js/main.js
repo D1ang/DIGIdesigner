@@ -1,16 +1,28 @@
-var canvas = new fabric.Canvas('canvas');
+const canvas = new fabric.Canvas('canvas');
+
+const garmentsConfigurator = {};
+garmentsConfigurator[''] = ['Select a brand'];
+garmentsConfigurator['shirt'] = ['Select a brand', 'Asics', 'Craft', 'Nike'];
+garmentsConfigurator['polo'] = ['Select a brand', 'Asics', 'Craft'];
+garmentsConfigurator['hoody'] = ['Select a brand', 'Nike'];
+
+const brandsConfigurator = {};
+brandsConfigurator[''] = ['Select a colour'];
+brandsConfigurator['Asics'] = ['Select a colour', 'Red', 'Blue', 'Purple', 'Gray'];
+brandsConfigurator['Craft'] = ['Select a colour', 'Yellow', 'Brown', 'White'];
+brandsConfigurator['Nike'] = ['Select a colour', 'Brown', 'Lime', 'Teal', 'Green', 'Maroon'];
 
 /*------------------------Image loader to load some artwork on the canvas------------------------*/
 
-document.getElementById('imageLoader').addEventListener("change", function (e) {
-  var reader = new FileReader();
+document.getElementById('images').addEventListener("change", function (e) {
+  let reader = new FileReader();
 
   reader.onload = function (event) {
-    var imgObj = new Image();
+    let imgObj = new Image();
     imgObj.src = event.target.result;
 
     imgObj.onload = function () {
-      var img = new fabric.Image(imgObj);
+      let img = new fabric.Image(imgObj);
 
       img.scaleToHeight(180);
       img.scaleToWidth(180);
@@ -29,14 +41,14 @@ document.getElementById('imageLoader').addEventListener("change", function (e) {
 /*---------------------Bootstrap Custom Forms: filename appears after upload---------------------*/
 
 $('.custom-file-input').on('change', function () {
-  var fileName = $(this).val().split('\\').pop();
+  let fileName = $(this).val().split('\\').pop();
   $(this).siblings('.custom-file-label').addClass('selected').html(fileName);
 });
 
 /*--------------------------Resets the garment preview on field change--------------------------*/
 
-function pngReset() {
-  document.getElementById('garmentImage').src = 'assets/img/garment/empty-shirt.png'
+function resetGarments() {
+  document.getElementById('garments').src = 'assets/img/garment/empty-shirt.png'
 }
 
 /*------------------------------------Create brand valuelist-------------------------------------*/
@@ -45,33 +57,25 @@ function pngReset() {
    It wil listen on a change in the first valuelist and created an array that
    wil be used for a second valuelist based on the selection from the first */
 
-function garmentSelect() {
-  var garmentsAndBrands = {};
+function selectGarment() {
+  let garmentsElements = document.getElementById('garment');
+  let brandsList = document.getElementById('brands');
 
-  garmentsAndBrands[''] = ['Select a brand'];
-  garmentsAndBrands['shirt'] = ['Select a brand', 'Asics', 'Craft', 'Nike'];
-  garmentsAndBrands['polo'] = ['Select a brand', 'Asics', 'Craft'];
-  garmentsAndBrands['hoody'] = ['Select a brand', 'Nike'];
-
-  var garmentList = document.getElementById('garment');
-  var brandsList = document.getElementById('brands');
-
-  var selectGarment = garmentList.options[garmentList.selectedIndex].value;
+  let garment = garmentsElements.options[garmentsElements.selectedIndex].value;
   while (brandsList.options.length) {
     brandsList.remove(0);
   }
-  var garments = garmentsAndBrands[selectGarment];
+  let garments = garmentsConfigurator[garment];
   if (garments) {
-    var i;
-    for (i = 0; i < garments.length; i++) {
-      var garment = new Option(garments[i], i);
+    for (let i = 0; i < garments.length; i++) {
+      let garment = new Option(garments[i], i);
       brandsList.options.add(garment);
     }
   }
 
-  pngReset();
+  resetGarments();
 
-  document.getElementById('garmentImage').src = 'assets/img/garment/' + 'empty-' + selectGarment + '.png';
+  document.getElementById('garments').src = 'assets/img/garment/' + 'empty-' + garment + '.png';
 }
 
 /*------------------------------------Create colour valuelist------------------------------------*/
@@ -80,36 +84,28 @@ function garmentSelect() {
    It wil listen on a change in the second valuelist and created an array that
    wil be used for a third valuelist based on the selection from the second */
 
-function colourSelect() {
-  var BrandsAndColours = {};
-  BrandsAndColours[''] = ['Select a colour'];
-  BrandsAndColours['Asics'] = ['Select a colour', 'Red', 'Blue', 'Purple', 'Gray'];
-  BrandsAndColours['Craft'] = ['Select a colour', 'Yellow', 'Brown', 'White'];
-  BrandsAndColours['Nike'] = ['Select a colour', 'Brown', 'Lime', 'Teal', 'Green', 'Maroon'];
+function selectBrand() {
+  let brandElements = document.getElementById('brands');
+  let colourList = document.getElementById('colour');
 
-  var brandList = document.getElementById('brands');
-  var colourList = document.getElementById('colour');
-
-  var selectBrand = brandList.options[brandList.selectedIndex].text;
+  let selectBrand = brandElements.options[brandElements.selectedIndex].text;
   while (colourList.options.length) {
     colourList.remove(0);
   }
-  var colours = BrandsAndColours[selectBrand];
+  let colours = brandsConfigurator[selectBrand];
   if (colours) {
-    var i;
-    for (i = 0; i < colours.length; i++) {
-      var colour = new Option(colours[i], i);
+    for (let i = 0; i < colours.length; i++) {
+      let colour = new Option(colours[i], i);
       colourList.options.add(colour);
     }
   }
 
-  pngReset();
+  resetGarments();
 
-  var garmentList = document.getElementById('garment');
-  var selectGarment = garmentList.options[garmentList.selectedIndex].value;
+  let garmentsElements = document.getElementById('garment');
+  let garment = garmentsElements.options[garmentsElements.selectedIndex].value;
 
-  //document.getElementById('garmentImage').src = 'assets/svg/' + selectBrand.toLowerCase() + '-' + selectGarment + '.svg';
-  document.getElementById('garmentImage').src = 'assets/img/garment/' + 'empty-' + selectGarment + '.png';
+  document.getElementById('garments').src = 'assets/img/garment/' + 'empty-' + garment + '.png';
 }
 
 /*---------------------------------------Colour activator----------------------------------------*/
@@ -117,8 +113,8 @@ function colourSelect() {
 /*Grabs colour from the valuelist and transforms the background
   of the .div begind the png file to the proper colour. */
 
-function activateColour() {
-  var colourOption = document.getElementById('colour');
-  var i = colourOption.selectedIndex;
+function selectColour() {
+  let colourOption = document.getElementById('colour');
+  let i = colourOption.selectedIndex;
   document.getElementById('garment-div').style.backgroundColor = document.getElementById('colour').getElementsByTagName('option')[i].text;
 }
