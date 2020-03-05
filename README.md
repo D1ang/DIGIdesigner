@@ -13,7 +13,7 @@ In short:
 ## Demo
 A live demo version can be found **[here](https://d1ang.github.io/DIGIdesigner/)**
 
-![Design](https://github.com/D1ang/EL1TE/blob/master/mockups/responsive.png)
+![Design](https://github.com/D1ang/DIGIdesigner/blob/master/mockups/presentation.png)
 
 ## UX
 To make the tool as clear as possible to the customers and employees a basic but very clean design has been shosen.
@@ -47,9 +47,9 @@ and gives the end-user a straight away no nonsense feedback.
 ### Skeleton
 By using figma the following wireframes were created:
 
-[Digidesigner wireframe](https://github.com/D1ang/EL1TE/blob/master/mockups/wireframe.pdf)
+[Digidesigner wireframe](https://github.com/D1ang/DIGIdesigner/blob/master/mockups/wireframe.pdf)
 
-[Responsive phone wireframe](https://github.com/D1ang/EL1TE/blob/master/mockups/responsive.pdf)
+[Responsive phone wireframe](https://github.com/D1ang/EL1TE/blob/master/mockups/wireframe-sm.pdf)
 
 ### Surface
 The colours are almost non-excistent a very clean minimalist desgin has been chosen to force the attention to the provide sample shirt
@@ -93,8 +93,10 @@ To ensure compatibility and responsiveness it was also tested on an android base
 When the webpage is visited on larger screens the shirt sample wil be shown on the right side.
 This will be placed on the bottom on smaller screens.
 
+A png file is provided named "dukes.png" in the assets/img folder to test the upload feauture.
+
 The tool has been bug tested by customers and employees the choise for not using Jasmine has been made.
-Jasmine is not easy to understand and won't give the understandable feedback that a end-user can give.
+Jasmine is not easy to understand and won't give the understandable feedback that an end-user can provide.
 
 ## Bugs:
 
@@ -127,6 +129,8 @@ This site is hosted using GitHub pages, deployed directly from the master branch
 
 To run locally, you can clone this repository directly into the editor of your choice by pasting the link into your terminal.
 To cut ties with this GitHub repository, type `git remote rm origin` into the terminal.
+
+A png file is provided named "dukes.png" in the assets/img folder to test the upload and design feature.
 
 
 ## Credits
