@@ -63,9 +63,13 @@ Al the buttons are outlined to fit the input fields.
 3. Bootstrap - *To make the iput fields and buttons responsive*
 4. Figma - *To create a wireframe*
 5. JavaScript - *The engine of the tool to create the user interaction*
-6. Fabric.js - *A JavaScript Canvas Library that provides an interactive object model on top of canvas elements*
-7. jquery - *To improve inputfield feedback*
 8. FontAwesome - *Easy icon acces for the gender icons*
+
+### JavaScript Libraries
+1. jquery - *To improve inputfield feedback*
+2. Fabric.js - *A Canvas Library that provides an interactive object model on top of canvas elements*
+3. dom-to-image.js *Generates an image from a DOM node using HTML5 canvas*
+4. FileSaver.js *An HTML5 FileSaver implementation for saving files on the client-side*
 
 
 ## Features
@@ -76,7 +80,7 @@ When the colour is selected a command will be fired and the fabric will be colou
 A size can be selected for the garment and the quantity the user needs can be file din in a number field.
 Finally, a design can be uploaded to the garment and will be shown on the screen after upload.
 While the design will be properly sized the end-user does have an option the resize it at will.
-When finished the designed sample can be send by mail to the company.
+When finished the design can be saved as a jpeg or be send by mail to the company.
 
 
 ### Features Left to Implement

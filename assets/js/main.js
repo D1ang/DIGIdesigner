@@ -1,5 +1,3 @@
-const canvas = new fabric.Canvas('canvas');
-
 const garmentsConfigurator = {};
 garmentsConfigurator[''] = ['Select a brand'];
 garmentsConfigurator['shirt'] = ['Select a brand', 'Asics', 'Craft', 'Nike'];
@@ -11,6 +9,8 @@ brandsConfigurator[''] = ['Select a colour'];
 brandsConfigurator['Asics'] = ['Select a colour', 'Red', 'Blue', 'Purple', 'Gray'];
 brandsConfigurator['Craft'] = ['Select a colour', 'Yellow', 'Brown', 'White'];
 brandsConfigurator['Nike'] = ['Select a colour', 'Brown', 'Lime', 'Teal', 'Green', 'Maroon'];
+
+const canvas = new fabric.Canvas('canvas');
 
 /*------------------------Image loader to load some artwork on the canvas------------------------*/
 
@@ -117,4 +117,16 @@ function selectColour() {
   let colourOption = document.getElementById('colour');
   let i = colourOption.selectedIndex;
   document.getElementById('garment-div').style.backgroundColor = document.getElementById('colour').getElementsByTagName('option')[i].text;
+}
+
+/*----------------------------------------Download Image-----------------------------------------*/
+
+function downloadImage() {
+    domtoimage.toJpeg(document.getElementById('garment-div'), { quality: 0.95 })
+    .then(function (dataUrl) {
+        let link = document.createElement('a');
+        link.download = 'sample.jpeg';
+        link.href = dataUrl;
+        link.click();
+    });
 }
