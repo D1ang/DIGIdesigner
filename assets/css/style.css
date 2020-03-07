@@ -6,7 +6,7 @@ body, html {
   font-family: 'Montserrat', sans-serif;
 }
 
-/*----------------------Custom Botstrap styling---------------- */
+/*-----------------------------Custom Botstrap styling-----------------------------*/
 
 .title {
   font-weight: 300;
@@ -30,7 +30,7 @@ a.custom-icons:active {
   color: green;
 }
 
-/*----------------------Custom Botstrap radio buttons styling---------------- */
+/*----------------------Custom Botstrap radio buttons styling----------------------*/
 
 input.custom-radio-btn {
   visibility:hidden;
@@ -52,7 +52,7 @@ input.custom-radio-btn:checked + label.custom-radio-btn {
   color: #fff;
 }
 
-/*----------------------Garment example canvas box---------------- */
+/*----------------------------Garment example canvas box---------------------------*/
 
 .drawing-area {
   position: absolute;
@@ -68,6 +68,9 @@ input.custom-radio-btn:checked + label.custom-radio-btn {
   height: 400px;
   position: relative;
   user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 }
 
 #canvas {
@@ -76,11 +79,14 @@ input.custom-radio-btn:checked + label.custom-radio-btn {
   height: 400px;
   left: 0px;
   top: 0px;
-  user-select: none;
   cursor: default;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 }
 
-/*----------------------Garment colour---------------- */
+/*----------------------------------Garment colour---------------------------------*/
 
 #garment-div {
   width: 452px;
