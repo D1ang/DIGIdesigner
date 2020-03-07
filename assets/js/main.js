@@ -59,12 +59,6 @@ $('.custom-file-input').on('change', function() {
 	$(this).siblings('.custom-file-label').addClass('selected').html(fileName);
 });
 
-/*--------------------------Resets the garment preview on field change--------------------------*/
-
-function resetGarments() {
-	document.getElementById('garments').src = 'assets/img/garment/male-shirt.png';
-}
-
 /*-----------------------------------------Select Gender-----------------------------------------*/
 
 function selectGender() {
