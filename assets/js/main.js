@@ -3,14 +3,14 @@ const canvas = new fabric.Canvas('canvas');
 let selectedGender = '';
 
 const genderConfigurator = {};
-genderConfigurator['male'] = [ 'Select a garment', 'Shirt', 'Hoody', 'Longsleeve' ];
-genderConfigurator['female'] = [ 'Select a garment', 'Shirt', 'Hoody' ];
+genderConfigurator['male'] = [ 'Select a garment', 'Shirts', 'Hoodies', 'Longsleeves' ];
+genderConfigurator['female'] = [ 'Select a garment', 'Shirts', 'Hoodies' ];
 
 const garmentsConfigurator = {};
 garmentsConfigurator[''] = [ 'Select a brand' ];
-garmentsConfigurator['Shirt'] = [ 'Select a brand', 'Asics', 'Craft', 'Nike' ];
-garmentsConfigurator['Hoody'] = [ 'Select a brand', 'Asics', 'Craft' ];
-garmentsConfigurator['Longsleeve'] = [ 'Select a brand', 'Nike' ];
+garmentsConfigurator['Shirts'] = [ 'Select a brand', 'Asics', 'Craft', 'Nike' ];
+garmentsConfigurator['Hoodies'] = [ 'Select a brand', 'Asics', 'Craft' ];
+garmentsConfigurator['Longsleeves'] = [ 'Select a brand', 'Nike' ];
 
 const brandsConfigurator = {};
 brandsConfigurator[''] = [ 'Select a colour' ];
@@ -120,7 +120,7 @@ function selectGarment() {
 	}
 
 	document.getElementById('brands').disabled = false;
-	document.getElementById('garments').src = 'assets/img/garment/' + selectedGender + '-' + garment + '.png';
+	document.getElementById('garments').src = 'assets/img/garment/' + selectedGender + '-' + garment.toLowerCase() + '.png';
 }
 
 /*------------------------------------Create colour valuelist------------------------------------*/
