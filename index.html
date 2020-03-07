@@ -30,8 +30,10 @@
 
           <!-- Form first section-->
           <div class="form-group mt-4">
-            <input type="radio" name="genders" value="male" onclick="selectGender()">Male</input>
-            <input type="radio" name="genders" value="female" onclick="selectGender()">Female</input>
+            <input type="radio" id="inlineGender1" name="genders" value="male" onclick="selectGender()">
+            <label for="inlineGender1">Male</label>
+            <input type="radio" id="inlineGender2" name="genders" value="female" onclick="selectGender()">
+            <label for="inlineGender2">Female</label>
 
             <select id="garment" class="form-control form-control-lg my-2 custom-select" onchange="selectGarment()">
               <option value="">Select a garment</option>
