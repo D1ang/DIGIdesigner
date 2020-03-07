@@ -1,5 +1,7 @@
 const canvas = new fabric.Canvas('canvas');
 
+let selectedGender = '';
+
 const genderConfigurator = {};
 genderConfigurator['male'] = [ 'Select a garment', 'Shirt', 'Hoody', 'Longsleeve' ];
 genderConfigurator['female'] = [ 'Select a garment', 'Shirt', 'Hoody' ];
@@ -8,7 +10,7 @@ const garmentsConfigurator = {};
 garmentsConfigurator[''] = [ 'Select a brand' ];
 garmentsConfigurator['Shirt'] = [ 'Select a brand', 'Asics', 'Craft', 'Nike' ];
 garmentsConfigurator['Hoody'] = [ 'Select a brand', 'Asics', 'Craft' ];
-garmentsConfigurator['Longsleeve;'] = [ 'Select a brand', 'Nike' ];
+garmentsConfigurator['Longsleeve'] = [ 'Select a brand', 'Nike' ];
 
 const brandsConfigurator = {};
 brandsConfigurator[''] = [ 'Select a colour' ];
@@ -17,34 +19,32 @@ brandsConfigurator['Craft'] = [ 'Select a colour', 'Yellow', 'Brown', 'White' ];
 brandsConfigurator['Nike'] = [ 'Select a colour', 'Brown', 'Lime', 'Teal', 'Green', 'Maroon' ];
 
 document.addEventListener('DOMContentLoaded', function disableFields() {
-  document.getElementById('garment').disabled = true;
+	document.getElementById('garment').disabled = true;
 	document.getElementById('brands').disabled = true;
 	document.getElementById('colour').disabled = true;
 });
 
 /*------------------------Image loader to load some artwork on the canvas------------------------*/
 
-document.getElementById('images').addEventListener(
-	'change',
-	function(e) {
-		let reader = new FileReader();
+document.getElementById('images').addEventListener('change', function(e) {
+let reader = new FileReader();
 
 		reader.onload = function(event) {
-			let imgObj = new Image();
-			imgObj.src = event.target.result;
+      let imgObj = new Image();
+      imgObj.src = event.target.result;
 
 			imgObj.onload = function() {
 				let img = new fabric.Image(imgObj);
 
-				img.scaleToHeight(180);
-				img.scaleToWidth(180);
+				img.scaleToHeight(150);
+				img.scaleToWidth(150);
 				canvas.centerObject(img);
 				canvas.add(img);
 				canvas.renderAll();
 			};
 		};
 
-		// If the user selected a image, load it
+		// If the user select an image, load it
 		if (e.target.files[0]) {
 			reader.readAsDataURL(e.target.files[0]);
 		}
@@ -62,14 +62,13 @@ $('.custom-file-input').on('change', function() {
 /*--------------------------Resets the garment preview on field change--------------------------*/
 
 function resetGarments() {
-	document.getElementById('garments').src = 'assets/img/garment/empty-shirt.png';
+	document.getElementById('garments').src = 'assets/img/garment/male-shirt.png';
 }
 
 /*-----------------------------------------Select Gender-----------------------------------------*/
 
 function selectGender() {
 	let radioButtons = document.getElementsByName('genders');
-	let selectedGender = '';
 	let garmentList = document.getElementById('garment');
 
 	for (let i = 0; i < radioButtons.length; i++) {
@@ -91,11 +90,11 @@ function selectGender() {
 	}
 
 	document.getElementById('brands').value = '';
-  document.getElementById('colour').value = '';
+	document.getElementById('colour').value = '';
 
-  document.getElementById('garment').disabled = false;
-  document.getElementById('brands').disabled = true;
-  document.getElementById('colour').disabled = true;
+	document.getElementById('garment').disabled = false;
+	document.getElementById('brands').disabled = true;
+	document.getElementById('colour').disabled = true;
 }
 
 /*------------------------------------Create brand valuelist-------------------------------------*/
@@ -121,9 +120,7 @@ function selectGarment() {
 	}
 
 	document.getElementById('brands').disabled = false;
-	resetGarments();
-
-	document.getElementById('garments').src = 'assets/img/garment/' + 'empty-' + garment + '.png';
+	document.getElementById('garments').src = 'assets/img/garment/' + selectedGender + '-' + garment + '.png';
 }
 
 /*------------------------------------Create colour valuelist------------------------------------*/
@@ -149,12 +146,6 @@ function selectBrand() {
 	}
 
 	document.getElementById('colour').disabled = false;
-	resetGarments();
-
-	let garmentsElements = document.getElementById('garment');
-	let garment = garmentsElements.options[garmentsElements.selectedIndex].value;
-
-	document.getElementById('garments').src = 'assets/img/garment/' + 'empty-' + garment + '.png';
 }
 
 /*---------------------------------------Colour activator----------------------------------------*/
