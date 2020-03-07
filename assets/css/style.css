@@ -6,7 +6,7 @@ body, html {
   font-family: 'Montserrat', sans-serif;
 }
 
-/*-----------------------------Custom Botstrap styling-----------------------------*/
+/*------------------------------Custom Botstrap styling-------------------------------*/
 
 .title {
   font-weight: 300;
@@ -63,7 +63,7 @@ option:hover {
   text-align: center;
 }
 
-/*----------------------Custom Bootstrap radio buttons styling----------------------*/
+/*-----------------------Custom Bootstrap radio buttons styling-----------------------*/
 
 input.custom-radio-btn {
   visibility: hidden;
@@ -106,7 +106,21 @@ input.custom-gender-btn:hover + label.custom-gender-btn {
   color: red;
 }
 
-/*--------------------------------Garment canvas box-------------------------------*/
+/*----------------------------------Custom valuelists---------------------------------*/
+
+#garment:focus option:first-of-type {
+  display: none;
+}
+
+#brands:focus option:first-of-type {
+  display: none;
+}
+
+#colour:focus option:first-of-type {
+  display: none;
+}
+
+/*----------------------------------Garment canvas box--------------------------------*/
 
 #garment-div {
   width: 352px;
