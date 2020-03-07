@@ -17,17 +17,23 @@ body, html {
 }
 
 a.custom-icons:link, a.custom-icons:visited {
+  text-decoration: none;
+  cursor: pointer;
   color: #000;
-  text-decoration: none
 }
 
 a.custom-icons:hover {
-  color: blue;
-  text-decoration: none
+  text-decoration: none;
+  cursor: pointer;
+  color: green;
 }
 
 a.custom-icons:active {
-  color: green;
+  color: red;
+}
+
+option:hover {
+  cursor: pointer;
 }
 
 /*----------------------Custom Botstrap radio buttons styling----------------------*/
