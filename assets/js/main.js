@@ -18,6 +18,7 @@ brandsConfigurator['Asics'] = [ 'Select a colour', 'Red', 'Blue', 'Purple', 'Gra
 brandsConfigurator['Craft'] = [ 'Select a colour', 'Yellow', 'Brown', 'White' ];
 brandsConfigurator['Nike'] = [ 'Select a colour', 'Brown', 'Lime', 'Teal', 'Green', 'Maroon' ];
 
+//Disable fields on load to force users selection path.
 document.addEventListener('DOMContentLoaded', function disableFields() {
 	document.getElementById('garment').disabled = true;
 	document.getElementById('brands').disabled = true;
@@ -83,12 +84,20 @@ function selectGender() {
 		}
 	}
 
-	document.getElementById('brands').value = '';
-	document.getElementById('colour').value = '';
+  //reset form elements
+  resetBrandname = document.getElementById("brands");
+  resetBrandname.options[resetBrandname.selectedIndex].text = 'Select a brand';
+
+  resetColour = document.getElementById("colour");
+  resetColour.options[resetColour.selectedIndex].text = 'Select a colour';
 
 	document.getElementById('garment').disabled = false;
 	document.getElementById('brands').disabled = true;
-	document.getElementById('colour').disabled = true;
+  document.getElementById('colour').disabled = true;
+  
+  //reset garment image and colour
+  document.getElementById('garments').src = 'assets/img/garment/male-shirts.png';
+  document.getElementById('garment-div').style.backgroundColor = 'white';
 }
 
 /*------------------------------------Create brand valuelist-------------------------------------*/
@@ -145,7 +154,7 @@ function selectBrand() {
 /*---------------------------------------Colour activator----------------------------------------*/
 
 /*Grabs colour from the valuelist and transforms the background
-  of the .div begind the png file to the proper colour. */
+  of the .div behind the png file to the proper colour. */
 
 function selectColour() {
 	let colourOption = document.getElementById('colour');
