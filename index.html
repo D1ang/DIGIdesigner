@@ -15,7 +15,7 @@
   <!-- Navigation bar -->
   <nav class="navbar navbar-light navbar-custom">
     <div class="container">
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand" href="index.html">
         <img src="assets/img/logo.png" height="30" alt="International Brands Service">
       </a>
     </div>
@@ -27,21 +27,14 @@
       <div class="col-sm">
         <h1 class="title text-uppercase">Enter your details</h1>
         <form>
-          
+
           <!-- Form first section-->
           <div class="form-group mt-4">
-            <div class="form-check-inline">
-              <a class="custom-icons ml-1 mb-2" href="#"><i class="fas fa-male fa-2x"></i> Male</a>
-            </div>
-            <div class="form-check-inline">
-              <a class="custom-icons" href="#"><i class="fas fa-female fa-2x"></i> Female</a>
-            </div>
+            <input type="radio" name="genders" value="male" onclick="selectGender()">Male</input>
+            <input type="radio" name="genders" value="female" onclick="selectGender()">Female</input>
 
             <select id="garment" class="form-control form-control-lg my-2 custom-select" onchange="selectGarment()">
               <option value="">Select a garment</option>
-              <option value="shirt">T-Shirt</option>
-              <option value="polo">Polo</option>
-              <option value="hoody">Hoody</option>
             </select>
 
             <select id="brands" class="form-control form-control-lg my-2 custom-select" onchange="selectBrand()">
@@ -52,7 +45,7 @@
               <option value="">Select a colour</option>
             </select>
           </div>
-  
+
           <!--Form size section -->
           <div class="form-group">
             <label>Select a size</label>
