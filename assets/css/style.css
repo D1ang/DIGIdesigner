@@ -63,7 +63,7 @@ option:hover {
   text-align: center;
 }
 
-/*----------------------Custom Botstrap radio buttons styling----------------------*/
+/*----------------------Custom Bootstrap radio buttons styling----------------------*/
 
 input.custom-radio-btn {
   visibility: hidden;
@@ -83,6 +83,27 @@ label.custom-radio-btn {
 input.custom-radio-btn:checked + label.custom-radio-btn {
   background: rgb(40, 167, 69);
   color: #fff;
+}
+
+/*------------------------Custom Gender radio buttons styling-----------------------*/
+
+input.custom-gender-btn {
+  visibility: hidden;
+}
+
+label.custom-gender-btn {
+  cursor: pointer;
+  padding: 1px;
+  margin-right: 20px;
+  color: #000;
+}
+
+input.custom-gender-btn:checked + label.custom-gender-btn {
+  color: rgb(40, 167, 69);
+}
+
+input.custom-gender-btn:hover + label.custom-gender-btn {
+  color: red;
 }
 
 /*--------------------------------Garment canvas box-------------------------------*/

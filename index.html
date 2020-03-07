@@ -29,12 +29,15 @@
         <form>
 
           <!-- Form first section-->
-          <div class="form-group mt-4">
-            <input type="radio" id="inlineGender1" name="genders" value="male" onclick="selectGender()">
-            <label for="inlineGender1">Male</label>
-            <input type="radio" id="inlineGender2" name="genders" value="female" onclick="selectGender()">
-            <label for="inlineGender2">Female</label>
+          <div class="form-group my-0">
+            <input type="radio" class="form-check-input custom-gender-btn" id="inlineGender1" name="genders" value="male" onclick="selectGender()">
+            <label for="inlineGender1" class="form-check-label custom-gender-btn"><i class="fas fa-male fa-2x"></i> Male</label>
 
+            <input type="radio" class="form-check-input custom-gender-btn" id="inlineGender2" name="genders" value="female" onclick="selectGender()">
+            <label for="inlineGender2" class="form-check-label custom-gender-btn"><i class="fas fa-female fa-2x"></i> Female</label>
+          </div>
+
+          <div class="form-group mt-0">
             <select id="garment" class="form-control form-control-lg my-2 custom-select" onchange="selectGarment()">
               <option value="">Select a garment</option>
             </select>
