@@ -119,7 +119,6 @@ So, the choice for using png's as garment sample has been made. These are easily
 ### Reset input field on change:
 The input fields won't change when an option on the input field before are changed.
 
-
 The following tests have been used to ensure proper site functionality:
 
 - [GTmetrix](https://gtmetrix.com/): To test on website loading times.

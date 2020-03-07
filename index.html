@@ -38,40 +38,40 @@
             </div>
 
             <select id="garment" class="form-control form-control-lg my-2 custom-select" onchange="selectGarment()">
-              <option value="empty">Select a garment</option>
+              <option value="">Select a garment</option>
               <option value="shirt">T-Shirt</option>
               <option value="polo">Polo</option>
               <option value="hoody">Hoody</option>
             </select>
 
             <select id="brands" class="form-control form-control-lg my-2 custom-select" onchange="selectBrand()">
-              <option value="empty"></option>
+              <option value=""> </option>
             </select>
 
             <select id="colour" class="form-control form-control-lg my-2 custom-select" onchange="selectColour()">
-              <option value="empty"></option>
+              <option value=""> </option>
             </select>
           </div>
   
           <!--Form size section -->
           <div class="form-group">
-            <label for="size-group">Select a size</label>
-            <div class="row" id="size-group">
+            <label">Select a size</label>
+            <div class="row">
               <div class="col pr-0">
                 <input type="radio" class="form-check-input custom-radio-btn" name="inlineRadioOptions" id="inlineRadio1" value="xs">
-                <label for="inlineRadio1" class="form-check-label custom-radio-btn" for="inlineRadio1">XS</label>
+                <label for="inlineRadio1" class="form-check-label custom-radio-btn">XS</label>
               </div>
               <div class="col pr-0">
                 <input type="radio" class="form-check-input custom-radio-btn" name="inlineRadioOptions" id="inlineRadio2" value="s">
-                <label for="inlineRadio2" class="form-check-label custom-radio-btn" for="inlineRadio2">S</label>
+                <label for="inlineRadio2" class="form-check-label custom-radio-btn">S</label>
               </div>
               <div class="col pr-0">
                 <input type="radio" class="form-check-input custom-radio-btn" name="inlineRadioOptions" id="inlineRadio3" value="m">
-                <label for="inlineRadio3" class="form-check-label custom-radio-btn" for="inlineRadio3">M</label>
+                <label for="inlineRadio3" class="form-check-label custom-radio-btn">M</label>
               </div>
               <div class="col pr-0">
                 <input type="radio" class="form-check-input custom-radio-btn" name="inlineRadioOptions" id="inlineRadio4" value="l">
-                <label for="inlineRadio4" class="form-check-label custom-radio-btn" for="inlineRadio4">L</label>
+                <label for="inlineRadio4" class="form-check-label custom-radio-btn">L</label>
               </div>
               <div class="col">
                 <input type="radio" class="form-check-input custom-radio-btn" name="inlineRadioOptions" id="inlineRadio5" value="xl">
@@ -87,8 +87,8 @@
               <input type="number" class="form-control" id="quantity" placeholder="QTY">
             </div>
             <div class="form-group col-md-8">
-              <label for="upload">Upload design</label>
-              <div class="upload custom-file">
+              <label>Upload design</label>
+              <div class="custom-file">
                 <label for="customFile" class="custom-file-label">Choose file</label>
                 <input type="file" class="custom-file-input" id="images" name="images">
               </div>
@@ -110,7 +110,7 @@
       <!-- Garment preview -->
       <div class="col-sm">
         <div id="garment-div">
-          <img id="garments" src="assets/img/garment/empty-shirt.png">
+          <img id="garments" src="assets/img/garment/empty-shirt.png" alt="Garment">
           <div id="drawingArea" class="drawing-area">
             <div class="canvas-container">
               <canvas id="canvas" width="200" height="400"></canvas>
