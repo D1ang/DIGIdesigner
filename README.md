@@ -146,7 +146,7 @@ All text content and input fields on this tool were written by me.
 The company logo is created by me in collaboration with Janneke van Soeren (IBS studio employee)
 
 ### Media
-The shirt design is taken from the following site [Our Code World](https://ourcodeworld.com/articles/read/1016/how-to-create-your-own-t-shirt-designer-using-fabricjs-in-javascript), a tutorial based site.
+The garment designs are taken from the following site [Teespring](https://teespring.com/)
 
 The gender icons are from Font Awesome.
 
