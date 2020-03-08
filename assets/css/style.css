@@ -108,6 +108,9 @@ input.custom-gender-btn:hover + label.custom-gender-btn {
 
 /*----------------------------------Custom valuelists---------------------------------*/
 
+/* CSS strick for this found on stack overflow, posted by user: Samyappa
+https://stackoverflow.com/questions/45387539/how-to-disable-first-option-in-drop-down-select-menu */
+
 #garment:focus option:first-of-type {
   display: none;
 }

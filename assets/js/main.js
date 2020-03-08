@@ -14,9 +14,9 @@ garmentsConfigurator['Longsleeves'] = [ 'Select a brand', 'Nike' ];
 
 const brandsConfigurator = {};
 brandsConfigurator[''] = [ 'Select a colour' ];
-brandsConfigurator['Asics'] = [ 'Select a colour', 'Red', 'Blue', 'Purple', 'Gray' ];
-brandsConfigurator['Craft'] = [ 'Select a colour', 'Yellow', 'Brown', 'White' ];
-brandsConfigurator['Nike'] = [ 'Select a colour', 'Brown', 'Lime', 'Teal', 'Green', 'Maroon' ];
+brandsConfigurator['Asics'] = [ 'Select a colour', 'White', 'Blue', 'Purple', 'Gray' ];
+brandsConfigurator['Craft'] = [ 'Select a colour', 'White', 'Brown', 'Yellow' ];
+brandsConfigurator['Nike'] = [ 'Select a colour', 'White', 'Lime', 'Teal', 'Green', 'Maroon' ];
 
 //Disable fields on load to force users selection path.
 document.addEventListener('DOMContentLoaded', function disableFields() {
@@ -122,8 +122,16 @@ function selectGarment() {
 		}
 	}
 
-	document.getElementById('brands').disabled = false;
-	document.getElementById('garments').src = 'assets/img/garment/' + selectedGender + '-' + garment.toLowerCase() + '.png';
+  //reset form elements
+  document.getElementById('brands').disabled = false;
+  document.getElementById('colour').disabled = true;
+
+  resetColour = document.getElementById("colour");
+  resetColour.options[resetColour.selectedIndex].text = 'Select a colour';
+
+  //reset garment image and colour
+  document.getElementById('garments').src = 'assets/img/garment/' + selectedGender + '-' + garment.toLowerCase() + '.png';
+  document.getElementById('garment-div').style.backgroundColor = 'white';
 }
 
 /*------------------------------------Create colour valuelist------------------------------------*/
@@ -148,7 +156,15 @@ function selectBrand() {
 		}
 	}
 
-	document.getElementById('colour').disabled = false;
+  //reset form elements
+  document.getElementById('colour').disabled = false;
+
+  resetColour = document.getElementById("colour");
+  resetColour.options[resetColour.selectedIndex].text = 'Select a colour';
+
+  //reset garment image and colour
+  document.getElementById('garment-div').style.backgroundColor = 'white';
+  
 }
 
 /*---------------------------------------Colour activator----------------------------------------*/
