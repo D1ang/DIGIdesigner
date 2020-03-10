@@ -6,7 +6,7 @@ body, html {
   font-family: 'Montserrat', sans-serif;
 }
 
-/*------------------------------Custom Botstrap styling-------------------------------*/
+/*------------------------------Custom Bootstrap styling-------------------------------*/
 
 .title {
   font-weight: 300;
@@ -30,7 +30,7 @@ body, html {
   }
 }
 
-.navbar-custom {
+.custom-navbar {
   border-bottom: solid 1px rgb(228, 228, 228);
 }
 
@@ -104,7 +104,6 @@ label.custom-gender-btn {
 
 input.custom-gender-btn:hover + label.custom-gender-btn {
   color: rgb(128, 189, 255);
-  
 }
 
 input.custom-gender-btn:active + label.custom-gender-btn {
@@ -113,7 +112,6 @@ input.custom-gender-btn:active + label.custom-gender-btn {
 
 input.custom-gender-btn:checked + label.custom-gender-btn {
   color: rgb(128, 189, 255);
-  
 }
 
 /*-----------------------Custom radio buttons styling-----------------------*/
