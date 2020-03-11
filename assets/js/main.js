@@ -25,6 +25,13 @@ document.addEventListener('DOMContentLoaded', function disableFields() {
   document.getElementById('colour').disabled = true;
 });
 
+//JQuery - show inputfields brands and colour when garment inputfield is pressed.
+$(document).ready(function () {
+  $(".showSelections").click(function () {
+    $("select").show();
+  });
+});
+
 /*------------------------Image loader to load some artwork on the canvas------------------------*/
 
 document.getElementById('images').addEventListener('change', function (e) {
