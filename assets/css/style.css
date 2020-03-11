@@ -79,9 +79,8 @@ body, html {
   box-shadow: 0 0 0 0.2rem rgba(191, 222, 255);
 }
 
-.custom-select:not(:first-of-type) {
+.custom-select {
   cursor: pointer;
-  display: none;
 }
 
 .custom-select:hover {
