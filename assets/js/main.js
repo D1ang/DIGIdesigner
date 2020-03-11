@@ -1,22 +1,23 @@
 const canvas = new fabric.Canvas('canvas');
 
-let selectedGender = '';
+let selectedGender;
 
-const genderConfigurator = {};
-genderConfigurator['male'] = ['Select a garment', 'Shirts', 'Hoodies', 'Longsleeves'];
-genderConfigurator['female'] = ['Select a garment', 'Shirts', 'Hoodies'];
+const genderConfigurations = {
+  male: ['Select a garment', 'Shirts', 'Hoodies', 'Longsleeves'],
+  female: ['Select a garment', 'Shirts', 'Hoodies']
+}
 
-const garmentsConfigurator = {};
-garmentsConfigurator[''] = ['Select a brand'];
-garmentsConfigurator['Shirts'] = ['Select a brand', 'Asics', 'Craft', 'Nike'];
-garmentsConfigurator['Hoodies'] = ['Select a brand', 'Asics', 'Craft'];
-garmentsConfigurator['Longsleeves'] = ['Select a brand', 'Nike'];
+const garmentsConfigurations = {
+  Shirts: ['Select a brand', 'Asics', 'Craft', 'Nike'],
+  Hoodies: ['Select a brand', 'Asics', 'Craft'],
+  Longsleeves: ['Select a brand', 'Nike']
+}
 
-const brandsConfigurator = {};
-brandsConfigurator[''] = ['Select a colour'];
-brandsConfigurator['Asics'] = ['Select a colour', 'White', 'Blue', 'Purple', 'Gray'];
-brandsConfigurator['Craft'] = ['Select a colour', 'White', 'Brown', 'Yellow'];
-brandsConfigurator['Nike'] = ['Select a colour', 'White', 'Lime', 'Teal', 'Green', 'Maroon'];
+const brandsConfigurations = {
+  Asics: ['Select a colour', 'White', 'Blue', 'Purple', 'Gray'],
+  Craft: ['Select a colour', 'White', 'Brown', 'Yellow'],
+  Nike: ['Select a colour', 'White', 'Lime', 'Teal', 'Green', 'Maroon']
+}
 
 /*------------------------Image loader to load some artwork on the canvas------------------------*/
 
@@ -55,21 +56,14 @@ $('.custom-file-input').on('change', function () {
 
 /*-----------------------------------------Select Gender-----------------------------------------*/
 
-function selectGender() {
-  let radioButtons = document.getElementsByName('genders');
+function selectGender(gender) {
+  selectedGender = gender
   let garmentList = document.getElementById('garment');
-
-  for (let i = 0; i < radioButtons.length; i++) {
-    if (radioButtons[i].checked) {
-      selectedGender = radioButtons[i].value;
-      break;
-    }
-  }
 
   while (garmentList.options.length) {
     garmentList.remove(0);
   }
-  let garments = genderConfigurator[selectedGender];
+  let garments = genderConfigurations[selectedGender];
   if (garments) {
     for (let i = 0; i < garments.length; i++) {
       let selectedGender = new Option(garments[i], i);
@@ -107,7 +101,7 @@ function selectGarment() {
   while (brandsList.options.length) {
     brandsList.remove(0);
   }
-  let garments = garmentsConfigurator[garment];
+  let garments = garmentsConfigurations[garment];
   if (garments) {
     for (let i = 0; i < garments.length; i++) {
       let garment = new Option(garments[i], i);
@@ -141,7 +135,7 @@ function selectBrand() {
   while (colourList.options.length) {
     colourList.remove(0);
   }
-  let colours = brandsConfigurator[selectBrand];
+  let colours = brandsConfigurations[selectBrand];
   if (colours) {
     for (let i = 0; i < colours.length; i++) {
       let colour = new Option(colours[i], i);
@@ -157,7 +151,6 @@ function selectBrand() {
 
   //reset garment image and colour
   document.getElementById('garment-div').style.backgroundColor = 'white';
-
 }
 
 /*---------------------------------------Colour activator----------------------------------------*/
@@ -168,9 +161,7 @@ function selectBrand() {
 function selectColour() {
   let colourOption = document.getElementById('colour');
   let i = colourOption.selectedIndex;
-  document.getElementById('garment-div').style.backgroundColor = document
-    .getElementById('colour')
-    .getElementsByTagName('option')[i].text;
+  document.getElementById('garment-div').style.backgroundColor = document.getElementById('colour').getElementsByTagName('option')[i].text;
 }
 
 /*----------------------------------------Download Image-----------------------------------------*/
