@@ -18,20 +18,6 @@ brandsConfigurator['Asics'] = ['Select a colour', 'White', 'Blue', 'Purple', 'Gr
 brandsConfigurator['Craft'] = ['Select a colour', 'White', 'Brown', 'Yellow'];
 brandsConfigurator['Nike'] = ['Select a colour', 'White', 'Lime', 'Teal', 'Green', 'Maroon'];
 
-//Disable fields on load to force users selection path.
-document.addEventListener('DOMContentLoaded', function disableFields() {
-  document.getElementById('garment').disabled = true;
-  document.getElementById('brands').disabled = true;
-  document.getElementById('colour').disabled = true;
-});
-
-//JQuery - show inputfields brands and colour when garment inputfield is pressed.
-$(document).ready(function () {
-  $(".showSelections").click(function () {
-    $("select").show();
-  });
-});
-
 /*------------------------Image loader to load some artwork on the canvas------------------------*/
 
 document.getElementById('images').addEventListener('change', function (e) {
