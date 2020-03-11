@@ -157,3 +157,11 @@ The gender icons are from Font Awesome.
 - Fabric.js [link](http://fabricjs.com/)
 - W3schools.com [link](https://www.w3schools.com/)
 - The following site [link](https://ourcodeworld.com/articles/read/1016/how-to-create-your-own-t-shirt-designer-using-fabricjs-in-javascript) was used as an inspiration for the creation of this tool.
+
+
+### Todo
+- Update Wireframes.
+- Test all the buttons that are created.
+- Fix typo's.
+- Document Dom-to-image error.
+- Read result M1 and apply.
