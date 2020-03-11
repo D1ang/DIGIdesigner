@@ -12,36 +12,12 @@
 
 <body>
 
-  <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Well done!</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body text-center">
-          <p>You have uploaded your own design, lets <b>customise it!</b></br>
-            By selecting the uploaded design you have the power to:
-            reize, move and turn your design... Awesome!<br>
-          </p>
-          If you're not happy with the design press the <b>DEL</b> key.
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
   <!-- Navigation bar -->
   <nav class="navbar navbar-light custom-navbar pl-0">
     <div class="container">
       <a class="navbar-brand" href="index.html">
-        <img src="assets/img/logo.png" height="30" class="d-inline-block align-top" alt="International Brands Service">
-        DIGIdesigner<span id="custom-subtext">design your own shirt!</span>
+        <img src="assets/img/logo.png" height="30" class="d-inline-block align-top" alt="Digidesigner">
+        DIGIdesigner <span id="custom-subtext">design your own shirt!</span>
       </a>
     </div>
   </nav>
@@ -55,22 +31,22 @@
 
           <!-- Form topt section-->
           <div class="form-group my-2">
-            <input type="radio" class="form-check-input custom-gender-btn" id="inlineGender1" name="genders" value="male" onclick="selectGender()">
-            <label for="inlineGender1" class="form-check-label custom-gender-btn"><i class="fas fa-male fa-2x blinking"></i> Male</label>
-            <input type="radio" class="form-check-input custom-gender-btn" id="inlineGender2" name="genders" value="female" onclick="selectGender()">
-            <label for="inlineGender2" class="form-check-label custom-gender-btn"><i class="fas fa-female fa-2x"></i> Female</label>
+            <input type="radio" class="form-check-input custom-gender-btn" id="inlineGenderMale" name="genders" value="male" onclick="selectGender()">
+            <label for="inlineGenderMale" class="form-check-label custom-gender-btn"><i class="fas fa-male fa-2x blinking"></i> Male</label>
+            <input type="radio" class="form-check-input custom-gender-btn" id="inlineGenderFemale" name="genders" value="female" onclick="selectGender()">
+            <label for="inlineGenderFemale" class="form-check-label custom-gender-btn"><i class="fas fa-female fa-2x"></i> Female</label>
           </div>
 
           <div class="form-group mt-0">
-            <select id="garment" class="btn2 form-control form-control-lg my-2 custom-select showSelections" onchange="selectGarment()">
+            <select id="garment" class="btn2 form-control form-control-lg my-2 custom-select" onchange="selectGarment()" disabled>
               <option value="">Please select a gender first</option>
             </select>
 
-            <select id="brands" class="form-control form-control-lg my-2 custom-select" onchange="selectBrand()">
+            <select id="brands" class="form-control form-control-lg my-2 custom-select" onchange="selectBrand()" disabled>
               <option value="">Select a brand</option>
             </select>
 
-            <select id="colour" class="form-control form-control-lg my-2 custom-select" onchange="selectColour()">
+            <select id="colour" class="form-control form-control-lg my-2 custom-select" onchange="selectColour()" disabled>
               <option value="">Select a colour</option>
             </select>
           </div>
@@ -80,24 +56,24 @@
             <label>Select a size</label>
             <div class="row">
               <div class="col pr-0">
-                <input type="radio" class="form-check-input custom-radio-btn" name="inlineRadioOptions" id="inlineRadio1" value="xs">
-                <label for="inlineRadio1" class="form-check-label custom-radio-btn">XS</label>
+                <input type="radio" class="form-check-input custom-radio-btn" name="inlineRadioOptions" id="inlineRadioXS" value="xs">
+                <label for="inlineRadioXS" class="form-check-label custom-radio-btn">XS</label>
               </div>
               <div class="col pr-0">
-                <input type="radio" class="form-check-input custom-radio-btn" name="inlineRadioOptions" id="inlineRadio2" value="s">
-                <label for="inlineRadio2" class="form-check-label custom-radio-btn">S</label>
+                <input type="radio" class="form-check-input custom-radio-btn" name="inlineRadioOptions" id="inlineRadioS" value="s">
+                <label for="inlineRadioS" class="form-check-label custom-radio-btn">S</label>
               </div>
               <div class="col pr-0">
-                <input type="radio" class="form-check-input custom-radio-btn" name="inlineRadioOptions" id="inlineRadio3" value="m">
-                <label for="inlineRadio3" class="form-check-label custom-radio-btn">M</label>
+                <input type="radio" class="form-check-input custom-radio-btn" name="inlineRadioOptions" id="inlineRadioM" value="m">
+                <label for="inlineRadioM" class="form-check-label custom-radio-btn">M</label>
               </div>
               <div class="col pr-0">
-                <input type="radio" class="form-check-input custom-radio-btn" name="inlineRadioOptions" id="inlineRadio4" value="l">
-                <label for="inlineRadio4" class="form-check-label custom-radio-btn">L</label>
+                <input type="radio" class="form-check-input custom-radio-btn" name="inlineRadioOptions" id="inlineRadioL" value="l">
+                <label for="inlineRadioL" class="form-check-label custom-radio-btn">L</label>
               </div>
               <div class="col">
-                <input type="radio" class="form-check-input custom-radio-btn" name="inlineRadioOptions" id="inlineRadio5" value="xl">
-                <label for="inlineRadio5" class="form-check-label custom-radio-btn">XL</label>
+                <input type="radio" class="form-check-input custom-radio-btn" name="inlineRadioOptions" id="inlineRadioXL" value="xl">
+                <label for="inlineRadioXL" class="form-check-label custom-radio-btn">XL</label>
               </div>
             </div>
           </div>
@@ -109,10 +85,10 @@
               <input type="number" class="form-control" id="quantity" placeholder="QTY">
             </div>
             <div class="form-group col-md-8">
-              <label>Upload design</label>
+              <label>Upload logo</label>
               <div class="custom-file">
                 <label for="images" class="custom-file-label">Choose file</label>
-                <input type="file" class="custom-file-input" id="images" name="images" data-toggle="modal" data-target="#exampleModal">
+                <input type="file" class="custom-file-input" id="images" name="images" data-toggle="modal" data-target="#Modal">
               </div>
             </div>
           </div>
@@ -143,14 +119,39 @@
     </div>
   </div>
 
+  <!-- Modal -->
+  <div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="ModalLabel">Well done!</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body text-center">
+          <p>
+            You have uploaded your own logo, lets <b>customise it!</b></br>
+            By selecting the uploaded logo you have the power to:
+            resize, move and turn your logo... Awesome!<br>
+          </p>
+            If you're not happy with the logo press the <b>DEL</b> key.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script src="https://kit.fontawesome.com/dd6f581e56.js"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  <script src="assets/js/fabric.min.js"></script>
-  <script src="assets/js/dom-to-image.min.js"></script>
-  <script src="assets/js/FileSaver.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/3.6.2/fabric.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/1.3.8/FileSaver.min.js"></script>
   <script src="assets/js/main.js"></script>
 </body>
 
