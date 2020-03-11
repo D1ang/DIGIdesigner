@@ -30,6 +30,14 @@ body, html {
   }
 }
 
+#custom-subtext {
+  font-weight: 400;
+  font-size: 0.7em;
+  padding-left: 10px;
+  font-style: italic;
+  color: #6c757d;
+}
+
 .custom-navbar {
   border-bottom: solid 1px rgb(228, 228, 228);
 }
@@ -71,8 +79,9 @@ body, html {
   box-shadow: 0 0 0 0.2rem rgba(191, 222, 255);
 }
 
-.custom-select {
+.custom-select:not(:first-of-type) {
   cursor: pointer;
+  display: none;
 }
 
 .custom-select:hover {
