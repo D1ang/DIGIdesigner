@@ -63,6 +63,8 @@ html {
   background-color: #fff;
   border: 1px solid #ced4da;
   border-radius: 5px;
+  -webkit-transition: 0.15s;
+  -o-transition: 0.15s;
   transition: 0.15s;
 }
 
@@ -79,14 +81,16 @@ html {
   background: #fff;
   color: rgb(128, 189, 255);
   border: 1px solid rgb(128, 189, 255);
-  box-shadow: 0 0 0 0.2rem rgba(191, 222, 255);
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(191, 222, 255);
+          box-shadow: 0 0 0 0.2rem rgba(191, 222, 255);
 }
 
 .custom-buttons:visited {
   background: #fff;
   color: rgb(128, 189, 255);
   border: 1px solid rgb(128, 189, 255);
-  box-shadow: 0 0 0 0.2rem rgba(191, 222, 255);
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(191, 222, 255);
+          box-shadow: 0 0 0 0.2rem rgba(191, 222, 255);
 }
 
 .custom-select {
@@ -117,6 +121,8 @@ label.custom-gender-btn {
   padding: 1px;
   margin-right: 20px;
   color: #000;
+  -webkit-transition: 0.15s;
+  -o-transition: 0.15s;
   transition: 0.15s;
 }
 
@@ -147,6 +153,8 @@ label.custom-radio-btn {
   color: #6c757d;
   border: 1px solid #ced4da;
   border-radius: 5px;
+  -webkit-transition: 0.15s;
+  -o-transition: 0.15s;
   transition: 0.15s;
 }
 
@@ -159,7 +167,8 @@ input.custom-radio-btn:checked + label.custom-radio-btn {
   background: #fff;
   color: #6c757d;
   border: 1px solid rgb(128, 189, 255);
-  box-shadow: 0 0 0 0.2rem rgba(191, 222, 255);
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(191, 222, 255);
+          box-shadow: 0 0 0 0.2rem rgba(191, 222, 255);
 }
 
 /*----------------------------------Custom valuelists---------------------------------*/
