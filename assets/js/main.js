@@ -190,3 +190,13 @@ function downloadImage() {
     link.click();
   });
 }
+
+/*------------------------------------DEL key to delete image------------------------------------*/
+
+document.addEventListener("keydown", function (e) {
+  let keyCode = e.keyCode;
+
+  if (keyCode == 46) {
+    canvas.remove(canvas.getActiveObject());
+  }
+}, false);
