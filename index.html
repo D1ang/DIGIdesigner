@@ -12,7 +12,7 @@
 
 <body>
 
-  <!-- Navigation bar -->
+  <!--Navigation bar -->
   <nav class="navbar navbar-light custom-navbar pl-0">
     <div class="container">
       <a class="navbar-brand" href="index.html">
@@ -21,7 +21,7 @@
       </a>
     </div>
   </nav>
-  <!-- Navigation bar end-->
+  <!--Navigation bar end-->
 
   <div class="container mt-4">
     <div class="row">
@@ -29,7 +29,7 @@
         <h1 class="title text-uppercase">Enter your details</h1>
         <form>
 
-          <!-- Form topt section-->
+          <!--Form topt section-->
           <div class="form-group my-2">
             <input type="radio" class="form-check-input custom-gender-btn" id="inlineGenderMale" name="genders" value="male" onclick="selectGender('male')">
             <label for="inlineGenderMale" class="form-check-label custom-gender-btn"><i class="fas fa-male fa-2x blinking"></i> Male</label>
@@ -51,7 +51,7 @@
             </select>
           </div>
 
-          <!--Form size section -->
+          <!--Form size section-->
           <div class="form-group">
             <label>Select a size</label>
             <div class="row">
@@ -78,7 +78,7 @@
             </div>
           </div>
 
-          <!--Form Quantity & Upload section -->
+          <!--Form Quantity & Upload section-->
           <div class="form-row mt-4">
             <div class="form-group col-md-4">
               <label for="quantity">Quantity</label>
@@ -93,29 +93,44 @@
             </div>
           </div>
 
-          <!--Form buttons section -->
+          <!--Form buttons section for tablet and big screens-->
           <div class="row mt-4 pb-5">
             <div class="col custom-buttons-align">
-              <button type="button" class="btn btn-outline custom-buttons" onclick="downloadImage()">Download</button>
+              <button type="button" class="btn btn-outline custom-buttons d-none d-sm-block" onclick="downloadImage()">Download</button>
             </div>
             <div class="col custom-buttons-align">
-              <button type="button" class="btn btn-outline custom-buttons">Send</button>
+              <button type="button" class="btn btn-outline custom-buttons d-none d-sm-block">Send</button>
             </div>
             <div class="col custom-buttons-align">
-              <button type="button" class="btn btn-outline custom-buttons" onclick="location.href='index.html';">Reset</button>
+              <button type="button" class="btn btn-outline custom-buttons d-none d-sm-block" onclick="location.href='index.html';">Reset</button>
             </div>
           </div>
         </form>
       </div>
 
-      <!-- Garment preview -->
-      <div class="col-sm d-flex justify-content-center my-5">
+      <!-- Garment preview-->
+      <div class="col-sm d-flex justify-content-center my-1">
         <div id="garment-div">
           <img id="garments" src="assets/img/garment/male-shirts.png" alt="Garment">
           <div id="drawingArea" class="drawing-area">
             <div class="canvas-container">
               <canvas id="canvas" width="150" height="300"></canvas>
             </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Form buttons section for mobile screens-->
+      <div class="container">
+        <div class="row mt-4 pb-5">
+          <div class="col custom-buttons-align">
+            <button type="button" class="btn btn-outline custom-buttons d-block d-sm-none" onclick="downloadImage()">Download</button>
+          </div>
+          <div class="col custom-buttons-align">
+            <button type="button" class="btn btn-outline custom-buttons d-block d-sm-none">Send</button>
+          </div>
+          <div class="col custom-buttons-align">
+            <button type="button" class="btn btn-outline custom-buttons d-block d-sm-none" onclick="location.href='index.html';">Reset</button>
           </div>
         </div>
       </div>
