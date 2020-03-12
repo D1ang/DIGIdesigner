@@ -71,37 +71,37 @@ Al the buttons are outlined to fit the input fields.
 3. dom-to-image.js *Generates an image from a DOM node using HTML5 canvas*
 4. FileSaver.js *An HTML5 FileSaver implementation for saving files on the client-side*
 
-
 ## Features
 This tool creates input field options based on the chosen options by the end-user.
+When selecting a gender the garment list will be created.
+All the lists are viewable at first hand but are disabled and grayed out and will be available when the user selects a option that will fill it.
 When selecting a garment on the first input field a second input field will be created with the available brands for that garment.
 When a brand is selected a new input field will be filled with the available colour for that garment and brand.
 When the colour is selected a command will be fired and the fabric will be coloured right away on the screen.
 A size can be selected for the garment and the quantity the user needs can be file din in a number field.
-Finally, a design can be uploaded to the garment and will be shown on the screen after upload.
+Finally, a logo can be uploaded to the garment and will be shown on the screen after upload.
 While the design will be properly sized the end-user does have an option the resize it at will.
+A modal will be shown explaining the options a user has to edit or delete the logo
 When finished the design can be saved as a jpeg or be send by mail to the company.
-
+A reset button is profided to reset the total all the options.
 
 ### Features Left to Implement
 In the future, we would like to add an API from cloud convert so uploaded samples can be converted to the proper format.
 Also, we would like to add some animations to the tool to make a nicer user experience.
 
-
 ## Testing
-All fields will function, but the send button will not send the design to an email address.
+All fields will function, but the send button will not send the logo to an email address.
 Custom CCS code is written for every button comfort design.
 
-This site was tested across multiple screen sizes on Chrome, Safari and Internet Explore
+This site was tested across multiple screen sizes on Chrome, Safari and Internet Explorer
 To ensure compatibility and responsiveness it was also tested on an android based mobile device (OnePlus5).
 When the webpage is visited on larger screens the shirt sample will be shown on the right side.
 This will be placed on the bottom on smaller screens.
 
-A .png file is provided named "dukes.png" in the assets/img folder to test the upload feature.
+A .png file is provided named "dukes.png" in the mockups folder to test the upload feature.
 
 The tool has been bug tested by customers and employees the choice for not using Jasmine has been made.
-Jasmine is not easy to understand and won't give the understandable feedback that an end-user can provide.
-
+Jasmine is not easy to understand and won't give the understandable feedback that an end-user can provide in this case.
 
 ## Bugs:
 
@@ -119,6 +119,10 @@ So, the choice for using png's as garment sample has been made. These are easily
 ### Reset input field on change:
 The input fields won't change when an option on the input field before are changed.
 
+### SecurityError: Failed to read the 'cssRules'
+The dom-to-image librarie creates a strange security error on the latest chrome version.
+It's more of a warning and not a real error and it doesn't effect any usability of the code.
+
 The following tests have been used to ensure proper site functionality:
 
 - [GTmetrix](https://gtmetrix.com/): To test on website loading times.
@@ -126,7 +130,7 @@ The following tests have been used to ensure proper site functionality:
 - [W3C CSS Validator](https://jigsaw.w3.org/css-validator/): This validator checks the mark-up validity of Web documents in CSS.
 - [Unicorn Revealer](https://chrome.google.com/webstore/detail/unicorn-revealer/lmlkphhdlngaicolpmaakfmhplagoaln?hl=en-GB): Inspecting on overflow errors.
 - [Autoprefixer CSS online](https://autoprefixer.github.io/): Autoprefixer is a PostCSS plugin which parses your CSS and adds vendor prefixes.
-
+- [JSHint](https://https://jshint.com/): A Static Code Analysis Tool for JavaScript
 
 ## Deployment
 This site is hosted using GitHub pages, deployed directly from the master branch.
@@ -138,7 +142,6 @@ To cut ties with this GitHub repository, type `git remote rm origin` into the te
 
 A .png file is provided named "dukes.png" in the assets/img folder to test the upload and design feature.
 
-
 ## Credits
 
 ### Content
@@ -147,9 +150,7 @@ The company logo is created by me in collaboration with Janneke van Soeren (IBS 
 
 ### Media
 The garment designs are taken from the following site [Teespring](https://teespring.com/)
-
 The gender icons are from Font Awesome.
-
 
 ### Acknowledgements
 
@@ -157,11 +158,3 @@ The gender icons are from Font Awesome.
 - Fabric.js [link](http://fabricjs.com/)
 - W3schools.com [link](https://www.w3schools.com/)
 - The following site [link](https://ourcodeworld.com/articles/read/1016/how-to-create-your-own-t-shirt-designer-using-fabricjs-in-javascript) was used as an inspiration for the creation of this tool.
-
-
-### Todo
-- Update Wireframes.
-- Test all the buttons that are created.
-- Fix typo's.
-- Document Dom-to-image error.
-- Read result M1 and apply.
