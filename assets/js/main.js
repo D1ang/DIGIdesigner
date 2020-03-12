@@ -5,19 +5,19 @@ let selectedGender;
 const genderConfigurations = {
   male: ['Select a garment', 'Shirts', 'Hoodies', 'Longsleeves'],
   female: ['Select a garment', 'Shirts', 'Hoodies']
-}
+};
 
 const garmentsConfigurations = {
   Shirts: ['Select a brand', 'Asics', 'Craft', 'Nike'],
   Hoodies: ['Select a brand', 'Asics', 'Craft'],
   Longsleeves: ['Select a brand', 'Nike']
-}
+};
 
 const brandsConfigurations = {
   Asics: ['Select a colour', 'White', 'Blue', 'Purple', 'Gray'],
   Craft: ['Select a colour', 'White', 'Brown', 'Yellow'],
   Nike: ['Select a colour', 'White', 'Lime', 'Teal', 'Green', 'Maroon']
-}
+};
 
 /*------------------------Image loader to load some artwork on the canvas------------------------*/
 
@@ -57,7 +57,7 @@ $('.custom-file-input').on('change', function () {
 /*-----------------------------------------Select Gender-----------------------------------------*/
 
 function selectGender(gender) {
-  selectedGender = gender
+  selectedGender = gender;
   let garmentList = document.getElementById('garment');
 
   while (garmentList.options.length) {
