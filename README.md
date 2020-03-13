@@ -84,7 +84,7 @@ Finally, a logo can be uploaded to the garment and will be shown on the screen a
 While the logo will be properly sized, the end-user does have an option the resize it at will.
 A modal will be shown explaining the options a user has to edit or delete the logo.
 When the design is finshed it can be saved as a .jpeg or be send by e-mail to the company.
-A reset button is provided to reset all the options.
+A reset button is provided to reset all the options and on smaller screens a delete button, to remove the selected logo.
 
 ### Features Left to Implement
 In the future, we would like to add an API from cloud convert, so uploaded logo's can be converted to the proper format.
