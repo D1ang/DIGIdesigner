@@ -42,6 +42,7 @@ document.getElementById('images').addEventListener('change', function (e) {
   // If the user select an image, load it
   if (e.target.files[0]) {
     reader.readAsDataURL(e.target.files[0]);
+    $('#Modal').modal() 
   }
 },
   false
@@ -177,10 +178,22 @@ function downloadImage() {
 
 /*------------------------------------DEL key to delete image------------------------------------*/
 
-document.addEventListener("keydown", function (e) {
-  let keyCode = e.keyCode;
-
-  if (keyCode == 46) {
-    canvas.remove(canvas.getActiveObject());
+$('html').keyup(function(e){
+  if(e.keyCode == 46) {
+      deleteSelectedObjectsFromCanvas();
   }
-}, false);
+});    
+
+function deleteSelectedObjectsFromCanvas(){
+let selection = canvas.getActiveObject();
+if (selection.type === 'activeSelection') {
+  selection.forEachObject(function(element) {
+      canvas.remove(element);
+  });
+}
+else{
+  canvas.remove(selection);
+}
+canvas.discardActiveObject();
+canvas.requestRenderAll();
+}
