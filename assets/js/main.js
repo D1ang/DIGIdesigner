@@ -42,7 +42,7 @@ document.getElementById('images').addEventListener('change', function (e) {
   // If the user select an image, load it
   if (e.target.files[0]) {
     reader.readAsDataURL(e.target.files[0]);
-    $('#Modal').modal() 
+    $('#Modal').modal();
   }
 },
   false
