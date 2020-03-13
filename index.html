@@ -88,7 +88,7 @@
               <label>Upload logo</label>
               <div class="custom-file">
                 <label for="images" class="custom-file-label">Choose file</label>
-                <input type="file" class="custom-file-input" id="images" name="images" data-toggle="modal" data-target="#Modal">
+                <input type="file" class="custom-file-input" id="images" name="images">
               </div>
             </div>
           </div>
@@ -130,6 +130,9 @@
             <button type="button" class="btn btn-outline custom-buttons d-block d-sm-none">Send</button>
           </div>
           <div class="col custom-buttons-align">
+            <button type="button" class="btn btn-outline custom-buttons d-block d-sm-none" onclick="deleteSelectedObjectsFromCanvas()">Delete</button>
+          </div>
+          <div class="col custom-buttons-align">
             <button type="button" class="btn btn-outline custom-buttons d-block d-sm-none" onclick="location.href='index.html';">Reset</button>
           </div>
         </div>
@@ -153,7 +156,7 @@
             By selecting the uploaded logo you have the power to:
             resize, move and turn your logo... Awesome!<br>
           </p>
-            If you're not happy with the logo press the <b>DEL</b> key.
+            If you're not happy with the logo, select it on the design and press the <b>Delete</b> key.
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
