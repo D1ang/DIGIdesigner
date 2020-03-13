@@ -130,7 +130,7 @@ The following tests have been used to ensure proper site functionality:
 - [W3C CSS Validator](https://jigsaw.w3.org/css-validator/): This validator checks the mark-up validity of Web documents in CSS.
 - [Unicorn Revealer](https://chrome.google.com/webstore/detail/unicorn-revealer/lmlkphhdlngaicolpmaakfmhplagoaln?hl=en-GB): Inspecting on overflow errors.
 - [Autoprefixer CSS online](https://autoprefixer.github.io/): Autoprefixer is a PostCSS plugin which parses your CSS and adds vendor prefixes.
-- [JSHint](https://https://jshint.com/): A static code analysis tool for JavaScript.
+- [JSHint](https://jshint.com/): A static code analysis tool for JavaScript.
 
 ## Deployment
 This site is hosted using GitHub pages, deployed directly from the master branch.
